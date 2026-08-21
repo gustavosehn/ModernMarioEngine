@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_music_underground",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":96.96653,
+  "exportDir":"",
+  "name":"snd_music_underground",
+  "parent":{
+    "name":"Day",
+    "path":"folders/Sounds/Music/Level Music/Day.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_music_underground.ogg",
+  "volume":1.0,
+}

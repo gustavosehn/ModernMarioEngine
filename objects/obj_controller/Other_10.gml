@@ -1,0 +1,1 @@
+audio_set_master_gain(global.audio_master, 0)

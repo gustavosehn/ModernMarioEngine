@@ -1,0 +1,6 @@
+if (fps >= 60)
+	draw_text_colour(0, 0, string_hash_to_newline((string(fps) + " FPS")), c_lime, c_lime, c_lime, c_lime, 1)
+else if (fps < 60)
+    draw_text_colour(0, 0, string_hash_to_newline((string(fps) + " FPS")), c_yellow, c_yellow, c_yellow, c_yellow, 1)
+else if (fps < 30)
+    draw_text_colour(0, 0, string_hash_to_newline((string(fps) + " FPS")), c_red, c_red, c_red, c_red, 1)
