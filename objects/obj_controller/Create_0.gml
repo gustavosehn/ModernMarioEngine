@@ -1,5 +1,6 @@
 gml_release_mode(true);
 scr_init_globals()
+
 global.shadows = 1
 global.ambiente = "ground"
 global.gw = 1536
@@ -14,5 +15,6 @@ global.creator = "GustavoSehn 2026"
 global.star_flash = 0
 global.timer = 0
 global.world = 1
+global.font_google_legacy = font_add("font_as.ttf", 12, 0, 0, 32, 128)
 global.coins = 0
 event_user(3)

@@ -1,4 +1,4 @@
-with instance_create_depth(x, y, depth, obj_fadein)
+with instance_create(x, y, obj_fadein)
 {
 	target = rm_template
 }
