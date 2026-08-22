@@ -17,6 +17,7 @@ global.world = 1
 global.font_google_legacy = font_add("font_as.ttf", 36, 0, 0, 32, 128)
 global.coins = 0
 global.language = 0
+global.levelname = ""
 event_user(3)
 switch (os_get_language())
 {
