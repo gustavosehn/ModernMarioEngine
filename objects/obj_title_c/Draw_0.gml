@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_hud, 0, 32, 32, scalex, scaley, image_angle, c_white, image_alpha)

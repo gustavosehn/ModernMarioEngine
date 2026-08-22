@@ -6,8 +6,12 @@ function __global_object_depths() {
 
 	// insert the generated arrays here
 	global.__objectDepths[0] = 0; // obj_persistent
+	global.__objectDepths[1] = -200; // obj_curtainout
+	global.__objectDepths[2] = -150; // obj_cursor
 
 	global.__objectNames[0] = "obj_persistent";
+	global.__objectNames[1] = "obj_curtainout";
+	global.__objectNames[2] = "obj_cursor";
 
 
 	// create another array that has the correct entries
