@@ -1,4 +1,2 @@
 with instance_create(x, y, obj_fadein)
-{
-	target = rm_template
-}
+	target = rm_logo

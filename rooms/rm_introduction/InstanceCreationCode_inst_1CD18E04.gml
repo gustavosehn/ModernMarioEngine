@@ -1,0 +1,1 @@
+sprite_index = spr_luigi_small_walk

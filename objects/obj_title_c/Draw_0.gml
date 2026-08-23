@@ -1,1 +1,6 @@
 draw_sprite_ext(spr_hud, 0, 32, 32, scalex, scaley, image_angle, c_white, image_alpha)
+draw_set_halign(fa_right)
+draw_set_font(global.font_google_legacy)
+draw_text_colour(1433, 779, scr_language(1), c_black, c_black, c_black, c_black, 1)
+draw_text_colour(1430, 776, scr_language(1), c_white, c_white, c_white, c_white, 1)
+draw_set_halign(fa_left)

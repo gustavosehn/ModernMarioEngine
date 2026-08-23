@@ -9,6 +9,7 @@ global.fade = 0.25
 global.showfps = 0
 s = 1
 version_equivalent = 100
+token_equivalent = "1541158256859418755"
 global.ver = "MME 1.0.0"
 global.creator = "GustavoSehn 2026"
 global.star_flash = 0
@@ -24,5 +25,6 @@ switch (os_get_language())
     case "es": global.language = 0; break;
     case "pt": global.language = 2; break;
     default: global.language = 1; break;
-}	
-event_user(4)
+}
+
+np_initdiscord(token_equivalent, false, "0")
