@@ -25,4 +25,4 @@ switch (os_get_language())
     case "pt": global.language = 2; break;
     default: global.language = 1; break;
 }	
-alarm[0] = 1
+event_user(4)

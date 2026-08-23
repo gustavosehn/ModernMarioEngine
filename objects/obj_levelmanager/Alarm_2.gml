@@ -1,0 +1,8 @@
+__view_set(e__VW.Visible, 0, true)
+__view_set(e__VW.Visible, 1, false)
+__view_set(e__VW.Visible, 2, false)
+__view_set(e__VW.Visible, 3, false)
+__view_set(e__VW.Visible, 4, false)
+__view_set(e__VW.Visible, 5, false)
+__view_set(e__VW.Visible, 6, false)
+__view_set(e__VW.Visible, 7, false)
