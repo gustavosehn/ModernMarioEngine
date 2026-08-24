@@ -1,8 +1,23 @@
 /// @description It's a me, Mario!
 sprite_index = scr_marioidle()
-
+canjump = 1
 jumphold = 0
 jumpcut = 0
+switch global.powerup
+{
+    case 0:
+        mask_index = spr_smallmask
+        break
+    case 1:
+        mask_index = spr_bigmask
+        break
+    default:
+        mask_index = spr_bigmask
+}
+enable_gravity = 1
+canturn = 1
+canskid = 1
+speed_conveyor = 0
 
 //Is Mario invulnerable?
 invulnerable = 0
@@ -13,9 +28,6 @@ spinjump = 0
 //Mario's current state
 //0: Stand, 1: Walk, 2: Jump 3: Fall
 state = 0
-
-//Is Mario on ground?
-canjump = 1
 
 //Mario's direction
 //-1: Left, 1: Right
@@ -48,3 +60,9 @@ jumpnow = 0
 
 //Mario Hit Points
 hitpoints = 0
+
+//Is Mario skidding?
+skidnow = 0
+
+//Handles Mario's skid smoke
+alarm[5] = 8

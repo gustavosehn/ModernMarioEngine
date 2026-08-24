@@ -1,3 +1,4 @@
+/// @description Mario's default step event
 if (global.pp == 0)
 {
 	if (disablecontrols == 0) 
@@ -18,23 +19,69 @@ if (global.pp == 0)
 		if (keyboard_check(global.key_left))
 		{
 			direct = -1
-			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 4, y - 1, obj_solid))
+			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 4, y - 1, obj_solid) && (isduck == 0 || !canjump))
 			{
-				hspeed -= 0.24
-				if (hspeed < -5.2)
-					hspeed = -5.2
+				if (hspeed > 0)
+				{
+					hspeed -= 0.4
+				}
+				else if (keyboard_check(global.throw_catch))
+				{
+					hspeed -= 0.24
+					if (hspeed < -12)
+						hspeed = -12
+				}
+				else
+				{
+					if (hspeed < -5.2)
+						hspeed = min(hspeed + 0.6, -5.2)
+					else
+					{
+						hspeed -= 0.24
+						if (hspeed < -5.2)
+							hspeed = -5.2
+					}
+				}
 			}
 		}
 	
 		if (keyboard_check(global.key_right))
 		{
 			direct = 1
-			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 4, y - 1, obj_solid))
+			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 4, y - 1, obj_solid) && (isduck == 0 || !canjump))
 			{
-				hspeed += 0.24
-				if (hspeed > 5.2)
-					hspeed = 5.2
+				if (hspeed < 0)
+				{
+					hspeed += 0.4
+				}
+				else if (keyboard_check(global.throw_catch))
+				{
+					hspeed += 0.24
+					if (hspeed > 12)
+						hspeed = 12
+				}
+				else
+				{
+					if (hspeed > 5.2)
+						hspeed = max(hspeed - 0.6, 5.2)
+					else
+					{
+						hspeed += 0.24
+						if (hspeed > 5.2)
+							hspeed = 5.2
+					}
+				}
 			}
+		}
+		
+		if (keyboard_check(global.key_down))
+		{
+			if (vspeed == 0)
+				isduck = 1
+		} else
+		{
+			if (vspeed >= 0)
+				isduck = 0
 		}
 	
 		if (keyboard_check(global.jump_bounce) && !jumpnow)
