@@ -1,7 +1,7 @@
 gml_release_mode(true);
 scr_init_globals()
 global.shadows = 1
-global.ambiente = "castle"
+global.ambiente = "underground"
 global.gw = 1536
 global.gh = 864
 global.night = 0

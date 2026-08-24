@@ -11,6 +11,7 @@ function scr_init_globals(){
 	global.warp_x = 0;
 	global.warp_y = 0;
 	global.pp = 0;
+	global.powerup = 0;
 	
 	
 	

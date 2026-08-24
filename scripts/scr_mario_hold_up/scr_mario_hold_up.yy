@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_mario_hold_up",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_mario_hold_up",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Scripts/Sprites.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

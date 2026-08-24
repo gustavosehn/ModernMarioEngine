@@ -1,17 +1,14 @@
 /// @description It's a me, Mario!
 sprite_index = scr_marioidle()
 
+jumphold = 0
+jumpcut = 0
+
 //Is Mario invulnerable?
 invulnerable = 0
 
 //Is Mario spinning?
 spinjump = 0
-
-//Mario's current hspeed
-xspeed = 0
-
-//Mario's current vspeed
-yspeed = 0
 
 //Mario's current state
 //0: Stand, 1: Walk, 2: Jump 3: Fall
