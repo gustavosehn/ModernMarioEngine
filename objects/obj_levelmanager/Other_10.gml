@@ -1,6 +1,5 @@
 var __prop
 
-if global.aparencia == 2 {
 	if global.ambiente == "ground" {
 		__prop = snd_music_ground
 		levelmusic = __prop
@@ -11,7 +10,6 @@ if global.aparencia == 2 {
 		__prop = snd_music_underground
 		levelmusic = __prop
 	} else if global.ambiente == "castle" {
-		__prop = snd_music_castle
+		__prop = snd_music_snow
 		levelmusic = __prop
 	}
-}

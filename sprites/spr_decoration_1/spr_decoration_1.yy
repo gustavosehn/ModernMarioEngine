@@ -32,7 +32,7 @@
   ],
   "name":"spr_decoration_1",
   "nineSlice":null,
-  "origin":0,
+  "origin":6,
   "parent":{
     "name":"Decos",
     "path":"folders/Sprites/Decos.yy",
@@ -112,7 +112,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":64,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
