@@ -6,6 +6,7 @@ global.gw = 1536
 global.gh = 864
 global.night = 0
 global.fade = 0.25
+global.round = 0
 global.showfps = 0
 s = 1
 version_equivalent = 100

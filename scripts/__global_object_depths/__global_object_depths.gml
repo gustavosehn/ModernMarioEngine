@@ -8,10 +8,18 @@ function __global_object_depths() {
 	global.__objectDepths[0] = 0; // obj_persistent
 	global.__objectDepths[1] = -200; // obj_curtainout
 	global.__objectDepths[2] = -150; // obj_cursor
+	global.__objectDepths[3] = -10; // obj_ground
+	global.__objectDepths[4] = -25; // obj_mario
+	global.__objectDepths[5] = 0; // obj_mariointro
+	global.__objectDepths[6] = -1; // obj_mariointro
 
 	global.__objectNames[0] = "obj_persistent";
 	global.__objectNames[1] = "obj_curtainout";
 	global.__objectNames[2] = "obj_cursor";
+	global.__objectNames[3] = "obj_ground";
+	global.__objectNames[4] = "obj_mario";
+	global.__objectNames[5] = "obj_mariointro";
+	global.__objectNames[6] = "obj_ground4";
 
 
 	// create another array that has the correct entries

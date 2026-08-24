@@ -74,15 +74,33 @@ if (global.pp == 0)
 		    state = 3
 	
 		if (keyboard_check(global.key_left) && hspeed > 8)
+		{
 		    skidnow = 1
+			if (!audio_is_playing(scr_snd_skid()))
+				audio_play_sound(scr_snd_skid(), 0, 1)
+		}
 		else if (keyboard_check(global.key_right) && hspeed < -8)
+		{
 		    skidnow = 1
+			if (!audio_is_playing(scr_snd_skid()))
+				audio_play_sound(scr_snd_skid(), 0, 1)
+		}
 		else if (hspeed > 0 && hspeed < 2 && isduck == 1 && canjump == 1)
+		{
 		    skidnow = 1
+			if (!audio_is_playing(scr_snd_skid()))
+				audio_play_sound(scr_snd_skid(), 0, 1)
+		}
 		else if (hspeed < 0 && hspeed > -2 && isduck == 1 && canjump == 1)
+		{
 		    skidnow = 1
-		else
+			if (!audio_is_playing(scr_snd_skid()))
+				audio_play_sound(scr_snd_skid(), 0, 1)
+		} else
+		{
 		    skidnow = 0
+			audio_stop_sound(scr_snd_skid())
+		}
 	
 		event_user(2)
 	}

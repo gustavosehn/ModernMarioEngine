@@ -1,4 +1,5 @@
 /// @description It's a me, Mario!
+depth = -25
 sprite_index = scr_marioidle()
 canjump = 1
 jumphold = 0

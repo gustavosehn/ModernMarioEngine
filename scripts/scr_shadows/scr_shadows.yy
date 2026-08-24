@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_shadows",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_shadows",
+  "parent":{
+    "name":"Shadows",
+    "path":"folders/Scripts/Shadows.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

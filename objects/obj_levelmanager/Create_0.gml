@@ -6,6 +6,7 @@ alarm[4] = 60
 alarm[6] = 1
 global.time = 300
 global.coins = 0
+global.ambiente = "ground"
 global.onoffblock = 1
 barrier = 0
 follow = 0

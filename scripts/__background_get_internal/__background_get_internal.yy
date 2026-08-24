@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"__background_get_internal",
   "parent":{
-    "name":"compatibility",
-    "path":"folders/Scripts/compatibility.yy",
+    "name":"background",
+    "path":"folders/Scripts/compatibility/background.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
