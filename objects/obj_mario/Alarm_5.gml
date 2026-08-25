@@ -6,7 +6,7 @@ if (skidnow == 1 && canjump == 1)
         with (instance_create((x + 4), (y + 128), obj_skidsmoke))
         {
             sprite_index = spr_skidsmoke
-            depth = -12
+            depth = -26
         }
     }
     else
@@ -14,7 +14,7 @@ if (skidnow == 1 && canjump == 1)
         with (instance_create((x - 32), (y + 128), obj_skidsmoke))
         {
             sprite_index = spr_skidsmoke
-            depth = -12
+            depth = -26
         }
     }
 }

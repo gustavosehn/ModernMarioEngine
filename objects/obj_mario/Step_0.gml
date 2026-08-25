@@ -6,7 +6,7 @@ if (global.pp == 0)
 		mask_index = spr_smallmask
 		if (vspeed >= 0)
 		{
-			if (collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))
+			if (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))
 				canjump = 1
 			else
 				canjump = 0
@@ -59,9 +59,9 @@ if (global.pp == 0)
 			while (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 3, y - 1, obj_solid))
 				x++
 		}
-		if (hspeed == 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))
+		if (hspeed == 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))
 		    state = 0
-		else if (hspeed != 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))
+		else if (hspeed != 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))
 		{
 		    if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 5, y - 1, obj_solid)) or (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 5, y - 1, obj_solid))
 		        state = 0

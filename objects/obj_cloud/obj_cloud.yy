@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_deadmario",
+  "%Name":"obj_cloud",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_deadmario",
+  "name":"obj_cloud",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mario",
-    "path":"folders/Objects/Main/Mario.yy",
+    "name":"Blocks",
+    "path":"folders/Objects/Blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mario_deads",
-    "path":"sprites/spr_mario_deads/spr_mario_deads.yy",
+    "name":"spr_cloud",
+    "path":"sprites/spr_cloud/spr_cloud.yy",
   },
   "spriteMaskId":null,
   "visible":true,
