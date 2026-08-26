@@ -16,8 +16,22 @@ if (global.pp == 0)
 				x++
 		}
 		
+		if (keyboard_check(global.key_up))
+		{
+			if (isduck == 0)
+				isup = 1
+		} else
+		{
+			isup = 0	
+		}
+		
 		if (keyboard_check(global.key_left))
 		{
+			if (direct == 1 && holding == 1)
+			{
+				alarm[4] = 7
+				turn = 1
+			}
 			direct = -1
 			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 4, y - 1, obj_solid) && (isduck == 0 || !canjump))
 			{
@@ -47,6 +61,11 @@ if (global.pp == 0)
 	
 		if (keyboard_check(global.key_right))
 		{
+			if (direct == -1 && holding == 1)
+			{
+				alarm[4] = 7
+				turn = 1
+			}
 			direct = 1
 			if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 4, y - 1, obj_solid) && (isduck == 0 || !canjump))
 			{
