@@ -39,24 +39,33 @@ if (global.pp == 0)
 		}
 		if (vspeed >= 0)
 		{
-			if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y, obj_solid))
+			if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom + 2, obj_solid, false, true))
 			{
 				vspeed = 0
-				while (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y, obj_solid))
+				while (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_solid, false, true))
 					y--
 			}
 		}
-	
-		if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 4, y - 1, obj_solid))
+		if (vspeed < 0)
+		{
+			if (collision_rectangle(bbox_left + 2, bbox_top - 2, bbox_right - 2, bbox_top, obj_solid, false, true))
+			{
+				vspeed = 0
+				while (collision_rectangle(bbox_left + 2, bbox_top - 1, bbox_right - 2, bbox_top, obj_solid, false, true))
+					y++
+			}
+		}
+
+		if (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 4, bbox_bottom - 2, obj_solid, false, true))
 		{
 			hspeed = 0
-			while (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x + 3, y - 1, obj_solid))
+			while (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
 				x--
 		}
-		if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 4, y - 1, obj_solid))
+		if (collision_rectangle(bbox_left - 4, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
 		{
 			hspeed = 0
-			while (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x - 3, y - 1, obj_solid))
+			while (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
 				x++
 		}
 		if (hspeed == 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))

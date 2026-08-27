@@ -14,3 +14,6 @@ with (obj_groundparent)
 	if visible == 1 && image_alpha == 1
 		scr_shadows()
 }
+
+if (global.shadows == 0)
+	instance_destroy()
