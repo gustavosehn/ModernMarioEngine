@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mario_transform",
+  "%Name":"obj_mario_transform2",
   "eventList":[],
   "managed":true,
-  "name":"obj_mario_transform",
+  "name":"obj_mario_transform2",
   "overriddenProperties":[],
   "parent":{
     "name":"Mario",
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_mario_small_idle",
-    "path":"sprites/spr_mario_small_idle/spr_mario_small_idle.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
