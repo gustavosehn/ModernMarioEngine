@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mariointro",
+  "%Name":"obj_score",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mariointro",
+  "name":"obj_score",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mario",
-    "path":"folders/Objects/Main/Mario.yy",
+    "name":"Score",
+    "path":"folders/Objects/Interactive/Specials/Effects/Score.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mario_small_walk",
-    "path":"sprites/spr_mario_small_walk/spr_mario_small_walk.yy",
+    "name":"spr_score",
+    "path":"sprites/spr_score/spr_score.yy",
   },
   "spriteMaskId":null,
   "visible":true,

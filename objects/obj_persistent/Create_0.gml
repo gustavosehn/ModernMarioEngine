@@ -1,12 +1,12 @@
 gml_release_mode(true);
 scr_init_globals()
-global.shadows = 1
+global.shadows = 0
 global.ambiente = "castle"
 global.gw = 1536
 global.gh = 864
 global.night = 0
 global.fade = 0.25
-global.round = 0
+global.round = 1
 global.showfps = 0
 s = 1
 version_equivalent = 100

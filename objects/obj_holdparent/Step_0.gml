@@ -1,105 +1,75 @@
 if (held == 0)
 {
-	if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 4, obj_solidtop))
-	{
-		if (vspeed >= 0)
-			vspeed = 0
-	} else if (!collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 4, obj_solidtop))
-	{
-		vspeed += 0.7
-		if (vspeed > 19)
-			vspeed = 19
-	}
-} else
-{
-	if (instance_exists(obj_mario))
-	{
-		var xx, yy, inst
-		inst = obj_mario
-		xx = inst.x
-		yy = inst.y
-		
-		if (global.powerup == 0)
-		{
-			if (inst.direct == 1)
-			{
-				if (inst.turn == 0)
-				{
-					xx = inst.x + 52
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				} else
-				{
-					xx = inst.x
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				}
-			} else
-			{
-				if (inst.turn == 0)
-				{
-					xx = inst.x - 52
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				} else
-				{
-					xx = inst.x
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				}
-			}
-		}
-		if (global.powerup > 0)
-		{
-			if (inst.direct == 1)
-			{
-				if (inst.turn == 0)
-				{
-					xx = inst.x + 52
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				} else
-				{
-					xx = inst.x
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				}
-			} else
-			{
-				if (inst.turn == 0)
-				{
-					xx = inst.x - 52
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				} else
-				{
-					xx = inst.x
-					yy = inst.y + 58
-					vspeed = 0
-					hspeed = 0
-					gravity = 0
-				}
-			}
-		}
-		vspeed = 0
-		hspeed = 0
-		gravity = 0
-		x = xx
-		y = yy
-	}
+    if (landed == 1)
+    {
+        if (!collision_rectangle(bbox_left + 4, bbox_bottom, bbox_right - 4, bbox_bottom + 1, obj_solid, false, true))
+            landed = 0
+
+        if (hspeed > 0)
+        {
+            hspeed -= 0.24
+            if (hspeed < 0)
+                hspeed = 0
+        }
+        else if (hspeed < 0)
+        {
+            hspeed += 0.24
+            if (hspeed > 0)
+                hspeed = 0
+        }
+    }
+
+    if (landed == 0)
+    {
+        if (vspeed >= 0 || !collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 4, obj_solidtop))
+        {
+            vspeed += 0.7
+            if (vspeed > 19)
+                vspeed = 19
+        }
+    }
+
+    if (vspeed < 0)
+    {
+        landed = 0
+        if (collision_rectangle(bbox_left + 4, bbox_top, bbox_right - 4, bbox_top + 2, obj_solid, false, true))
+        {
+            vspeed = 0
+            while (collision_rectangle(bbox_left + 4, bbox_top, bbox_right - 4, bbox_top + 2, obj_solid, false, true))
+                y++
+        }
+    }
+    else if (vspeed >= 0)
+    {
+        if (collision_rectangle(bbox_left + 4, bbox_bottom - 2, bbox_right - 4, bbox_bottom, obj_solid, false, true))
+        {
+            if (bouncy < 1)
+            {
+                vspeed = 0
+                landed = 1
+            } else
+            {
+                vspeed = -bouncy
+                bouncy *= 0.5
+            }
+            while (collision_rectangle(bbox_left + 4, bbox_bottom - 2, bbox_right - 4, bbox_bottom, obj_solid, false, true))
+                y--
+            y = floor(y)
+        }
+    }
+
+    if (collision_rectangle(bbox_right, bbox_top + 2, bbox_right + 2, bbox_bottom - 2, obj_solid, false, true))
+    {
+        hspeed = 0
+        while (collision_rectangle(bbox_right, bbox_top + 2, bbox_right + 2, bbox_bottom - 2, obj_solid, false, true))
+            x--
+    }
+    if (collision_rectangle(bbox_left - 2, bbox_top + 2, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+    {
+        hspeed = 0
+        while (collision_rectangle(bbox_left - 2, bbox_top + 2, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+            x++
+    }
 }
 event_user(3)
+event_user(4)

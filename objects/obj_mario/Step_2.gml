@@ -14,7 +14,11 @@ if (global.pp == 0)
 		    default:
 		        mask_index = spr_bigmask
 		}
-		if (turn == 1)
+		if (kicking == 1)
+		{
+			sprite_index = scr_mariokick()
+		}
+		else if (turn == 1)
 		{
 			sprite_index = scr_mariospin()
 			image_speed = 0
