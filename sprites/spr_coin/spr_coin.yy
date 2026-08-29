@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"spr_coin",
   "bboxMode":0,
-  "bbox_bottom":15,
-  "bbox_left":2,
-  "bbox_right":13,
+  "bbox_bottom":63,
+  "bbox_left":8,
+  "bbox_right":55,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -23,7 +23,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":16,
+  "height":64,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"966a99da-ba80-469f-a029-621e1201a4e0","blendMode":0,"displayName":"default","isLocked":false,"name":"966a99da-ba80-469f-a029-621e1201a4e0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -114,5 +114,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":16,
+  "width":64,
 }

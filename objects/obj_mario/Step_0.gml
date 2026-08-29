@@ -3,11 +3,17 @@ if (global.pp == 0)
 {
 	if (state < 4)
 	{
+		var topblock = collision_rectangle(bbox_left, bbox_bottom - vspeed - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true)
 		mask_index = spr_smallmask
 		if (vspeed >= 0)
 		{
-			if (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))
+			if (topblock != noone)
+			{
+				if (canjump == 0)
+					event_user(15)
 				canjump = 1
+				y = topblock.bbox_top - (bbox_bottom - y)
+			}
 			else
 				canjump = 0
 		}
@@ -41,6 +47,8 @@ if (global.pp == 0)
 		{
 			if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom + 2, obj_solid, false, true))
 			{
+				if (canjump == 0)
+					event_user(15)
 				vspeed = 0
 				while (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_solid, false, true))
 					y--
@@ -55,7 +63,6 @@ if (global.pp == 0)
 					y++
 			}
 		}
-
 		if (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 4, bbox_bottom - 2, obj_solid, false, true))
 		{
 			hspeed = 0
@@ -109,6 +116,15 @@ if (global.pp == 0)
 		{
 		    skidnow = 0
 			audio_stop_sound(scr_snd_skid())
+		}
+		
+		if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 4, obj_solid))
+		{
+			audio_stop_sound(scr_snd_jump())
+			if !audio_is_playing(scr_snd_bump())
+			{
+				audio_play_sound(scr_snd_bump(), 0, 0)
+			}
 		}
 	
 		event_user(2)

@@ -19,7 +19,6 @@ enable_gravity = 1
 canturn = 1
 canskid = 1
 speed_conveyor = 0
-
 //Is Mario invulnerable?
 invulnerable = 0
 

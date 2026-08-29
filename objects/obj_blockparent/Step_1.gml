@@ -19,5 +19,6 @@ else if (expand == 2)
         expand = 0;
         s_scalex = _min_scale;
         s_scaley = _min_scale;
+		event_user(3)
     }
 }
