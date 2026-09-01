@@ -32,16 +32,16 @@ if (held == 0)
     if (vspeed < 0)
     {
         landed = 0
-        if (collision_rectangle(bbox_left + 4, bbox_top, bbox_right - 4, bbox_top + 2, obj_solid, false, true))
+        if (collision_rectangle(bbox_left + 8, bbox_top, bbox_right - 8, bbox_top + 2, obj_solid, false, true))
         {
             vspeed = 0
-            while (collision_rectangle(bbox_left + 4, bbox_top, bbox_right - 4, bbox_top + 2, obj_solid, false, true))
+            while (collision_rectangle(bbox_left + 12, bbox_top, bbox_right - 12, bbox_top + 2, obj_solid, false, true))
                 y++
         }
     }
     else if (vspeed >= 0)
     {
-        if (collision_rectangle(bbox_left + 4, bbox_bottom - 2, bbox_right - 4, bbox_bottom, obj_solid, false, true))
+        if (collision_rectangle(bbox_left + 12, bbox_bottom - 2, bbox_right - 12, bbox_bottom, obj_solid, false, true))
         {
             if (bouncy < 1)
             {
@@ -52,22 +52,22 @@ if (held == 0)
                 vspeed = -bouncy
                 bouncy *= 0.5
             }
-            while (collision_rectangle(bbox_left + 4, bbox_bottom - 2, bbox_right - 4, bbox_bottom, obj_solid, false, true))
+            while (collision_rectangle(bbox_left + 12, bbox_bottom - 2, bbox_right - 12, bbox_bottom, obj_solid, false, true))
                 y--
             y = floor(y)
         }
     }
 
-    if (collision_rectangle(bbox_right, bbox_top + 2, bbox_right + 2, bbox_bottom - 2, obj_solid, false, true))
+    if (collision_rectangle(bbox_right, bbox_top + 10, bbox_right + 2, bbox_bottom - 10, obj_solid, false, true))
     {
         hspeed = 0
-        while (collision_rectangle(bbox_right, bbox_top + 2, bbox_right + 2, bbox_bottom - 2, obj_solid, false, true))
+        while (collision_rectangle(bbox_right, bbox_top + 10, bbox_right + 2, bbox_bottom - 10, obj_solid, false, true))
             x--
     }
-    if (collision_rectangle(bbox_left - 2, bbox_top + 2, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+    if (collision_rectangle(bbox_left - 2, bbox_top + 10, bbox_left, bbox_bottom - 10, obj_solid, false, true))
     {
         hspeed = 0
-        while (collision_rectangle(bbox_left - 2, bbox_top + 2, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+        while (collision_rectangle(bbox_left - 2, bbox_top + 10, bbox_left, bbox_bottom - 10, obj_solid, false, true))
             x++
     }
 }
