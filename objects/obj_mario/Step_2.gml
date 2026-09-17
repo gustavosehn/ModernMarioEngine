@@ -26,14 +26,14 @@ if (global.pp == 0)
 		}
 		else if (isduck == 1)
 		{
-			if (holding == 1)
+			if (holding == 1 && spinjump == 0)
 				sprite_index = scr_mario_hold_down()
 			else
 				sprite_index = scr_mariodown()
 			image_speed = 0
 		} else if (state == 0)
 		{
-			if (holding == 1)
+			if (holding == 1 && spinjump == 0)
 			{
 				if (isup == 1)
 					sprite_index = scr_mario_hold_up()
@@ -49,7 +49,7 @@ if (global.pp == 0)
 			}
 		} else if (state == 1)
 		{
-			if (holding == 1)
+			if (holding == 1 && spinjump == 0)
 			{
 				if (skidnow == 1)
 				{
@@ -88,7 +88,7 @@ if (global.pp == 0)
 			}
 		} else if (state == 2)
 		{
-			if (holding == 1)
+			if (holding == 1 && spinjump == 0)
 			{
 				sprite_index = scr_mariohold()
 				image_speed = 0
@@ -102,12 +102,12 @@ if (global.pp == 0)
 				} else
 				{
 					sprite_index = scr_mariospin()
-					image_speed = 0.25
+					image_speed = 0.3
 				}
 			}
 		} else if (state == 3)
 		{
-			if (holding == 1)
+			if (holding == 1 && spinjump == 0)
 			{
 				sprite_index = scr_mariohold()
 				image_speed = 0

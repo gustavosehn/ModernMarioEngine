@@ -107,7 +107,7 @@ if (global.pp == 0)
 		{
 			if (collision_rectangle(bbox_left, bbox_bottom, bbox_right, bbox_bottom + 2, obj_solidtop, false, true) && !collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 2, obj_solid))
 			{
-				if (keyboard_check(global.stompjump))
+				if (keyboard_check(global.stompjump) && holding == 0)
 					spinjump = 1
 				else
 					spinjump = 0
@@ -150,17 +150,5 @@ if (global.pp == 0)
 			}
 		}
 		jumphold++
-	}
-	if (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
-	{
-	    hspeed = 0
-	    while (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
-	        x--
-	}
-	if (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
-	{
-	    hspeed = 0
-	    while (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
-	        x++
 	}
 }

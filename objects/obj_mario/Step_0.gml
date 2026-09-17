@@ -129,12 +129,12 @@ if (global.pp == 0)
 	
 		event_user(2)
 		
-		if (collision_rectangle(bbox_bottom - 4, bbox_left - hspeed - 4, bbox_top + 4, bbox_left + 1, obj_solid, false, true))
+		if (collision_rectangle(bbox_left - 4, bbox_top + 4, bbox_left - 1, bbox_bottom - 4, obj_solid, false, true))
 		{
 			hspeed = 0
 		}
-	
-		if (collision_rectangle(bbox_bottom - 4, bbox_right + hspeed + 4, bbox_top + 4, bbox_left - 1, obj_solid, false, true))
+
+		if (collision_rectangle(bbox_right + 1, bbox_top + 4, bbox_right + 4, bbox_bottom - 4, obj_solid, false, true))
 		{
 			hspeed = 0
 		}
