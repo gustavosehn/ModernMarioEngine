@@ -1,0 +1,1 @@
+instance_create_depth(xstart, ystart - 64, depth, obj_score)
