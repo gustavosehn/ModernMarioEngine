@@ -4,4 +4,3 @@ if (global.ambiente != "airship")
 else
     image_index = scr_autotile_start()
 sprite_index = scr_tile_ground_start()
-draw_sprite(spr_arrow_big, snow, x + 64, y - 192)

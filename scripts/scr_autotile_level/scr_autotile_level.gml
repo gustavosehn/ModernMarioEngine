@@ -1,57 +1,60 @@
-function scr_autotile2(argument0, argument1)
+function scr_autotile_level()
 {
+	
+	if (object_index != obj_ground_level) exit
+	
     var iw = sprite_width
-    var w_left = place_meeting((argument0 - iw), argument1, object_index)
-    var w_right = place_meeting((argument0 + iw), argument1, object_index)
-    var w_up = place_meeting(argument0, (argument1 - iw), object_index)
-    var w_down = place_meeting(argument0, (argument1 + iw), object_index)
-    var w_upleft = place_meeting((argument0 - iw), (argument1 - iw), object_index)
-    var w_downleft = place_meeting((argument0 - iw), (argument1 + iw), object_index)
-    var w_upright = place_meeting((argument0 + iw), (argument1 - iw), object_index)
-    var w_downright = place_meeting((argument0 + iw), (argument1 + iw), object_index)
-    vent1 = (!(place_meeting((argument0 + (iw * 2)), argument1, object_index)))
-    vent2 = (!(place_meeting(argument0, (argument1 - (iw * 2)), object_index)))
-    vent3 = (!(place_meeting(argument0, (argument1 + (iw * 2)), object_index)))
-    vent4 = (!(place_meeting((argument0 + (iw * 2)), (argument1 + iw), object_index)))
-    borde1 = (!(place_meeting((argument0 - (iw * 2)), argument1, object_index)))
-    borde2 = (!(place_meeting(argument0, (argument1 + (iw * 2)), object_index)))
-    if ((argument0 - iw) < 0)
+    var w_left = place_meeting((x - iw), y, obj_ground_level)
+    var w_right = place_meeting((x + iw), y, obj_ground_level)
+    var w_up = place_meeting(x, (y - iw), obj_ground_level)
+    var w_down = place_meeting(x, (y + iw), obj_ground_level)
+    var w_upleft = place_meeting((x - iw), (y - iw), obj_ground_level)
+    var w_downleft = place_meeting((x - iw), (y + iw), obj_ground_level)
+    var w_upright = place_meeting((x + iw), (y - iw), obj_ground_level)
+    var w_downright = place_meeting((x + iw), (y + iw), obj_ground_level)
+    vent1 = (!(place_meeting((x + (iw * 2)), y, obj_ground_level)))
+    vent2 = (!(place_meeting(x, (y - (iw * 2)), obj_ground_level)))
+    vent3 = (!(place_meeting(x, (y + (iw * 2)), obj_ground_level)))
+    vent4 = (!(place_meeting((x + (iw * 2)), (y + iw), obj_ground_level)))
+    borde1 = (!(place_meeting((x - (iw * 2)), y, obj_ground_level)))
+    borde2 = (!(place_meeting(x, (y + (iw * 2)), obj_ground_level)))
+    if ((x - iw) < 0)
     {
         w_left = 1
         w_upleft = 1
         w_downleft = 1
     }
-    if ((argument0 + iw) > room_width)
+    if ((x + iw) > room_width)
     {
         w_right = 1
         w_upright = 1
         w_downright = 1
     }
-    if ((argument1 - iw) < 0)
+    if ((y - iw) < 0)
     {
         w_up = 1
         w_upright = 1
         w_upleft = 1
     }
-    if ((argument1 + iw) > room_height)
+    if ((y + iw) > room_height)
     {
         w_down = 1
         w_downright = 1
         w_downleft = 1
     }
-    if (argument1 == (room_height - 16))
+    if (y == (room_height - 64))
         var tile = 2
     else
         tile = 44
     if w_up
     {
-        if (argument1 == (room_height - 16))
+        if (y == (room_height - 64))
             tile = 45
         else
             tile = 0
         if w_right
         {
-            if (argument1 == (room_height - 16))
+            if (y == (room_height - 64))
                 tile = 17
             else
                 tile = 4
@@ -124,19 +127,19 @@ function scr_autotile2(argument0, argument1)
             }
             else if w_left
             {
-                if (argument1 == (room_height - 16))
+                if (y == (room_height - 64))
                     tile = 34
                 else
                     tile = 15
                 if w_upright
                 {
-                    if (argument1 == (room_height - 16))
+                    if (y == (room_height - 64))
                         tile = 39
                     else
                         tile = 25
                     if w_upleft
                     {
-                        if (argument1 == (room_height - 16))
+                        if (y == (room_height - 64))
                             tile = 43
                         else
                             tile = 27
@@ -144,7 +147,7 @@ function scr_autotile2(argument0, argument1)
                 }
                 else if w_upleft
                 {
-                    if (argument1 == (room_height - 16))
+                    if (y == (room_height - 64))
                         tile = 42
                     else
                         tile = 26
@@ -152,7 +155,7 @@ function scr_autotile2(argument0, argument1)
             }
             else if w_upright
             {
-                if (argument1 == (room_height - 16))
+                if (y == (room_height - 64))
                     tile = 18
                 else
                     tile = 8
@@ -176,13 +179,13 @@ function scr_autotile2(argument0, argument1)
         }
         else if w_left
         {
-            if (argument1 == (room_height - 16))
+            if (y == (room_height - 64))
                 tile = 22
             else
                 tile = 7
             if w_upleft
             {
-                if (argument1 == (room_height - 16))
+                if (y == (room_height - 64))
                     tile = 24
                 else
                     tile = 11
@@ -191,7 +194,7 @@ function scr_autotile2(argument0, argument1)
     }
     else if w_right
     {
-        if (argument1 == (room_height - 16))
+        if (y == (room_height - 64))
             tile = 9
         else
             tile = 1
@@ -215,7 +218,7 @@ function scr_autotile2(argument0, argument1)
         }
         else if w_left
         {
-            if (argument1 == (room_height - 16))
+            if (y == (room_height - 64))
                 tile = 21
             else
                 tile = 46
@@ -233,10 +236,10 @@ function scr_autotile2(argument0, argument1)
     }
     else if w_left
     {
-        if (argument1 == (room_height - 16))
+        if (y == (room_height - 64))
             tile = 10
         else
             tile = 3
     }
-    return tile
+    return tile;
 }

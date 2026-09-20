@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ground2",
+  "%Name":"obj_ground_level",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ground2",
+  "name":"obj_ground_level",
   "overriddenProperties":[],
   "parent":{
     "name":"Blocks",

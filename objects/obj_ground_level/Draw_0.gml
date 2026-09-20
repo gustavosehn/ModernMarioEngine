@@ -2,6 +2,5 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, ima
 if (global.ambiente != "airship")
     image_index = scr_autotile()
 else
-    image_index = scr_autotile_start()
+    image_index = scr_autotile_level()
 sprite_index = scr_tile_ground_start()
-draw_sprite(spr_arrow_big, snow, x + 64, y - 192)

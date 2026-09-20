@@ -1,20 +1,31 @@
-function scr_autotile()//global autotile for the ground family
+function meets_start(px, py) {
+    var a = instance_place(px, py, obj_ground)
+    var b = instance_place(px, py, obj_ground2)
+    var ok_a = (a != noone && a.object_index != obj_ground_level)
+    var ok_b = (b != noone)
+    return ok_a || ok_b
+}
+
+function scr_autotile_start()
 {
+	
+	if (object_index != obj_ground and object_index != obj_ground2) exit
+	
     var iw = sprite_width
-    var w_left = place_meeting((x - iw), y, obj_groundparent)
-    var w_right = place_meeting((x + iw), y, obj_groundparent)
-    var w_up = place_meeting(x, (y - iw), obj_groundparent)
-    var w_down = place_meeting(x, (y + iw), obj_groundparent)
-    var w_upleft = place_meeting((x - iw), (y - iw), obj_groundparent)
-    var w_downleft = place_meeting((x - iw), (y + iw), obj_groundparent)
-    var w_upright = place_meeting((x + iw), (y - iw), obj_groundparent)
-    var w_downright = place_meeting((x + iw), (y + iw), obj_groundparent)
-    vent1 = (!(place_meeting((x + (iw * 2)), y, obj_groundparent)))
-    vent2 = (!(place_meeting(x, (y - (iw * 2)), obj_groundparent)))
-    vent3 = (!(place_meeting(x, (y + (iw * 2)), obj_groundparent)))
-    vent4 = (!(place_meeting((x + (iw * 2)), (y + iw), obj_groundparent)))
-    borde1 = (!(place_meeting((x - (iw * 2)), y, obj_groundparent)))
-    borde2 = (!(place_meeting(x, (y + (iw * 2)), obj_groundparent)))
+    var w_left = meets_start((x - iw), y)
+    var w_right = meets_start((x + iw), y)
+    var w_up = meets_start(x, (y - iw))
+    var w_down = meets_start(x, (y + iw))
+    var w_upleft = meets_start((x - iw), (y - iw))
+    var w_downleft = meets_start((x - iw), (y + iw))
+    var w_upright = meets_start((x + iw), (y - iw))
+    var w_downright = meets_start((x + iw), (y + iw))
+    vent1 = (!meets_start((x + (iw * 2)), y))
+    vent2 = (!meets_start(x, (y - (iw * 2))))
+    vent3 = (!meets_start(x, (y + (iw * 2))))
+    vent4 = (!meets_start((x + (iw * 2)), (y + iw)))
+    borde1 = (!meets_start((x - (iw * 2)), y))
+    borde2 = (!meets_start(x, (y + (iw * 2))))
     if ((x - iw) < 0)
     {
         w_left = 1

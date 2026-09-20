@@ -11,6 +11,8 @@ function scr_tile_ground_start() {
 		case "snow":
 			return spr_ground7
 		case "airship":
+			if (object_index != obj_ground_level) 
+				return spr_ground6
 			return spr_ground5
 		case "desert":
 			return spr_ground9

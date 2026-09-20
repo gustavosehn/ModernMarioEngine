@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_autotile2",
+  "%Name":"scr_autotile_level",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_autotile2",
+  "name":"scr_autotile_level",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

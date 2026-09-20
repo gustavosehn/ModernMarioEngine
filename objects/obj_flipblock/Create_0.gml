@@ -6,3 +6,4 @@ s_scaley = 1
 ready = 0
 expand = 0
 mysolid = instance_create(x, y, obj_solid)
+x -= 32
