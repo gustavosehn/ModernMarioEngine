@@ -1,4 +1,3 @@
-/// @description Create Mario's skid smoke
 if (skidnow == 1 && canjump == 1)
 {
     if ((direct == 1) || (direct == -1))

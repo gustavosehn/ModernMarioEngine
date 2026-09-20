@@ -10,6 +10,15 @@ var __prop
 		__prop = snd_music_underground
 		levelmusic = __prop
 	} else if global.ambiente == "castle" {
+		__prop = snd_music_castle
+		levelmusic = __prop
+	} else if global.ambiente == "snow" {
 		__prop = snd_music_snow
+		levelmusic = __prop
+	} else if global.ambiente == "desert" {
+		__prop = snd_music_desert
+		levelmusic = __prop
+	} else if global.ambiente == "airship" {
+		__prop = snd_music_airship
 		levelmusic = __prop
 	}

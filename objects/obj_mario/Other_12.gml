@@ -1,4 +1,3 @@
-/// @description Mario's default step event
 if (global.pp == 0)
 {
 	if (disablecontrols == 0) 

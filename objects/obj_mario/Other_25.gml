@@ -1,5 +1,3 @@
-/// @description Reset some values
-
 vspeed = 0
 gravity = 0
 friction = 0

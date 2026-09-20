@@ -1,4 +1,3 @@
-/// @description Handles Mario's physics and movements
 if (global.pp == 0)
 {
 	if (state < 4)

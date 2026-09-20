@@ -1,4 +1,3 @@
-/// @description Handles Mario's sprites
 if (global.pp == 0)
 {
 	if (disablecontrols == 0)

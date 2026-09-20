@@ -1,4 +1,4 @@
-/// @description Make Mario bounce off of something
+
 canjump = 0
 jumphold = 0
 jumpcut = 0

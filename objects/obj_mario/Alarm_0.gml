@@ -1,4 +1,3 @@
-/// @description Make Mario's alpha blink
 if (invulnerable == 1)
 {
 	if image_alpha == 1

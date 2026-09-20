@@ -5,5 +5,9 @@ if global.ambiente == "ground" {
 } else if global.ambiente == "underground" {
 	__background_set(e__BG.Index, 0, bg_underground)
 } else if global.ambiente == "castle" {
-    __background_set(e__BG.Index, 0, bg_underground)
+    __background_set(e__BG.Index, 0, bg_castle)
+} else if global.ambiente == "snow" {
+    __background_set(e__BG.Index, 0, bg_snow)
+} else if global.ambiente == "desert" {
+    __background_set(e__BG.Index, 0, bg_desert)
 }
