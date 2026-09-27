@@ -10,4 +10,6 @@ if global.ambiente == "ground" {
     __background_set(e__BG.Index, 0, bg_snow)
 } else if global.ambiente == "desert" {
     __background_set(e__BG.Index, 0, bg_desert)
+} else if global.ambiente == "ghosthouse" {
+    __background_set(e__BG.Index, 0, bg_ghost_house)
 }

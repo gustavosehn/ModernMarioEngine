@@ -21,4 +21,7 @@ var __prop
 	} else if global.ambiente == "airship" {
 		__prop = snd_music_airship
 		levelmusic = __prop
+	} else if global.ambiente == "ghosthouse" {
+		__prop = snd_music_ghosthouse
+		levelmusic = __prop
 	}

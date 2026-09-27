@@ -212,6 +212,7 @@
     {"id":{"name":"snd_music_airship","path":"sounds/snd_music_airship/snd_music_airship.yy",},},
     {"id":{"name":"snd_music_castle","path":"sounds/snd_music_castle/snd_music_castle.yy",},},
     {"id":{"name":"snd_music_desert","path":"sounds/snd_music_desert/snd_music_desert.yy",},},
+    {"id":{"name":"snd_music_ghosthouse","path":"sounds/snd_music_ghosthouse/snd_music_ghosthouse.yy",},},
     {"id":{"name":"snd_music_ground_night","path":"sounds/snd_music_ground_night/snd_music_ground_night.yy",},},
     {"id":{"name":"snd_music_ground","path":"sounds/snd_music_ground/snd_music_ground.yy",},},
     {"id":{"name":"snd_music_sky_night","path":"sounds/snd_music_sky_night/snd_music_sky_night.yy",},},
