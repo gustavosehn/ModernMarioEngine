@@ -9,6 +9,16 @@ with (obj_mariointro)
 	scr_shadows()
 }
 
+with (obj_spinstar)
+{
+	scr_shadows()
+}
+
+with (obj_smoke)
+{
+	scr_shadows()
+}
+
 with (obj_groundparent)
 {
 	if visible == 1 && image_alpha == 1

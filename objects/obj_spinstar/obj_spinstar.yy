@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_score",
+  "%Name":"obj_spinstar",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_score",
+  "name":"obj_spinstar",
   "overriddenProperties":[],
   "parent":{
     "name":"Effects",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_score",
-    "path":"sprites/spr_score/spr_score.yy",
+    "name":"spr_spinstar",
+    "path":"sprites/spr_spinstar/spr_spinstar.yy",
   },
   "spriteMaskId":null,
   "visible":true,
