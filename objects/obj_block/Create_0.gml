@@ -7,4 +7,3 @@ ready = 0
 expand = 0
 inside = obj_blockshroom
 mysolid = instance_create(x, y, obj_solid)
-x -= 32

@@ -1,4 +1,4 @@
-if (collision_rectangle(bbox_left + 2, bbox_bottom + 3, bbox_right - 2, bbox_bottom, obj_mario, false, true) && ready == 0)
+if (collision_rectangle(bbox_left + 4, bbox_bottom + 3, bbox_right - 4, bbox_bottom, obj_mario, false, true) && ready == 0)
 {
 	if (obj_mario.vspeed < 0)
 	{

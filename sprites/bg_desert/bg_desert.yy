@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"bg_desert",
   "bboxMode":0,
-  "bbox_bottom":431,
+  "bbox_bottom":1727,
   "bbox_left":0,
-  "bbox_right":511,
+  "bbox_right":2047,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":432,
+  "height":1728,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"bf53d63d-8814-4ad6-a3e4-a95a047a095f","blendMode":0,"displayName":"default","isLocked":false,"name":"bf53d63d-8814-4ad6-a3e4-a95a047a095f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":512,
+  "width":2048,
 }

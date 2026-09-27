@@ -44,13 +44,13 @@ if (global.pp == 0)
 		}
 		if (vspeed >= 0)
 		{
-			if (collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom + 2, obj_solid, false, true))
+			if (collision_rectangle(bbox_left, bbox_bottom - 4, bbox_right, bbox_bottom + 2, obj_solid, false, true))
 			{
-				if (canjump == 0)
-					event_user(15)
-				vspeed = 0
-				while (collision_rectangle(bbox_left + 12, bbox_top, bbox_right - 12, bbox_bottom, obj_solid, false, true))
-					y--
+			    if (canjump == 0)
+			        event_user(15)
+			    vspeed = 0
+			    while (collision_rectangle(bbox_left + 12, bbox_bottom - 4, bbox_right - 12, bbox_bottom, obj_solid, false, true))
+			        y--
 			}
 		}
 		if (vspeed < 0)
@@ -61,18 +61,6 @@ if (global.pp == 0)
 				while (collision_rectangle(bbox_left + 12, bbox_top - 1, bbox_right - 12, bbox_top, obj_solid, false, true))
 					y++
 			}
-		}
-		if (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
-		{
-		    hspeed = 0
-		    while (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
-		        x--
-		}
-		if (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
-		{
-		    hspeed = 0
-		    while (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
-		        x++
 		}
 		if (hspeed == 0 && (vspeed == 0 && (collision_rectangle(bbox_left, bbox_bottom - 1, bbox_right, bbox_bottom + 2, obj_solidtop, false, true))))
 		    state = 0
@@ -117,7 +105,7 @@ if (global.pp == 0)
 			audio_stop_sound(scr_snd_skid())
 		}
 		
-		if (collision_box(bbox_left, bbox_bottom, bbox_right, bbox_top, x, y - 4, obj_solid))
+		if (collision_box(bbox_left + 2, bbox_bottom, bbox_right - 2, bbox_top, x, y - 4, obj_solid))
 		{
 			audio_stop_sound(scr_snd_jump())
 			if !audio_is_playing(scr_snd_bump())
@@ -127,15 +115,5 @@ if (global.pp == 0)
 		}
 	
 		event_user(2)
-		
-		if (collision_rectangle(bbox_left - 4, bbox_top + 4, bbox_left - 1, bbox_bottom - 4, obj_solid, false, true))
-		{
-			hspeed = 0
-		}
-
-		if (collision_rectangle(bbox_right + 1, bbox_top + 4, bbox_right + 4, bbox_bottom - 4, obj_solid, false, true))
-		{
-			hspeed = 0
-		}
 	}
 }

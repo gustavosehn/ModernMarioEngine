@@ -2,16 +2,16 @@ if (global.pp == 0)
 {
 	if (disablecontrols == 0) 
 	{
-		if (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
+		if (collision_rectangle(bbox_right, bbox_top + 8, bbox_right + 1, bbox_bottom - 4, obj_solid, false, true))
 		{
 		    hspeed = 0
-		    while (collision_rectangle(bbox_right, bbox_top + 4, bbox_right + 1, bbox_bottom - 2, obj_solid, false, true))
+		    while (collision_rectangle(bbox_right, bbox_top + 8, bbox_right + 1, bbox_bottom - 4, obj_solid, false, true))
 		        x--
 		}
-		if (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+		if (collision_rectangle(bbox_left - 1, bbox_top + 8, bbox_left, bbox_bottom - 4, obj_solid, false, true))
 		{
 		    hspeed = 0
-		    while (collision_rectangle(bbox_left - 1, bbox_top + 4, bbox_left, bbox_bottom - 2, obj_solid, false, true))
+		    while (collision_rectangle(bbox_left - 1, bbox_top + 8, bbox_left, bbox_bottom - 4, obj_solid, false, true))
 		        x++
 		}
 		
