@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_stomp",
+  "%Name":"snd_spin",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.55043083,
+  "duration":0.7211111,
   "exportDir":"",
-  "name":"snd_stomp",
+  "name":"snd_spin",
   "parent":{
     "name":"Sound Effects",
     "path":"folders/Sounds/Sound Effects.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_stomp.ogg",
+  "soundFile":"snd_spin.ogg",
   "volume":1.0,
 }

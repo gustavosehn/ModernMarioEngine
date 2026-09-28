@@ -1,7 +1,7 @@
-function scr_snd_score(){
+function scr_snd_score() {
 		switch(obj_mario.hitpoints) {
 		case 1:
-			return snd_stomp
+			return snd_kick
 		case 2:
 			return snd_kick2
 		case 3:
@@ -16,7 +16,10 @@ function scr_snd_score(){
 			return snd_kick7
 		case 8:
 			return snd_1up
+		case 9:
+			obj_mario.hitpoints = 8
+			return snd_1up
 		default:
-			return snd_stomp
+			return snd_kick
 	}
 }
